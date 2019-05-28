@@ -22,3 +22,12 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+# Collect the input
+
+# If there are no args:
+  # If the user doesn't specify any input, your program should
+  # print the calendar for the current month. The 'datetime'
+  # module may be helpful for this.
+# If there is 1 arg: 
+  # Do something
