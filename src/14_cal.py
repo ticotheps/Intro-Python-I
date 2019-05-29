@@ -23,6 +23,12 @@ import sys
 import calendar
 from datetime import datetime
 
+args = sys.argv
+
+print(args)
+
+
+
 # Collect the input
 
 # If there are no args:
@@ -31,3 +37,21 @@ from datetime import datetime
   # module may be helpful for this.
 # If there is 1 arg: 
   # Do something
+
+month = datetime.today().month
+year = datetime.today().year
+
+if len(args) == 1:
+    pass
+if len(args) == 2:
+    month = int(args[1])
+elif len(args) == 3:
+    month = int(args[1])
+    year = int(args[2])
+else: 
+    print("Error: Must be in format [month] [year]")
+    exit()
+
+calendar.TextCalendar().prmonth(year,month)
+
+
