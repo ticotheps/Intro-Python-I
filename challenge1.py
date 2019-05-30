@@ -52,3 +52,17 @@ fav_movies = {
 }
 
 print(fav_movies)
+
+# 6. Remove one of the original entries from the dictionary you created
+#    in questions 5 and add a new entry.
+
+# Removes an entry
+del fav_movies["Aquaman"]
+
+print(fav_movies)
+
+# Adds an entry
+fav_movies.update({ "Avengers" : 5 })
+
+print(fav_movies)
+
