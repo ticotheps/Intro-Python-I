@@ -42,3 +42,13 @@ if len(c) > 0:
 else:
     print("The set does not contain the number 50")
 
+# 5. Create a dictionary containing some of your favorite books or
+#    movies and a numerical rating from 1 to 5 for each item.
+
+fav_movies = {
+  "Wedding Crashers": 3,
+  "Aquaman": 4,
+  "Crazy Rich Asians": 5
+}
+
+print(fav_movies)
