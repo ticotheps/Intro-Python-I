@@ -27,3 +27,18 @@ z = ("spaghetti", "cheese burgers", "pizza")
 for i in z:
     print(i)
 
+# 4. Create a set of 10 random numbers between 1 and 100, search the 
+#    set for the value 50 and then print out a statement indicating 
+#    whether or not the set contains 50.
+
+random_set = random.sample(range(1,100), 10)
+
+print(random_set)
+
+c = [i for i in random_set if i == 50]
+
+if len(c) > 0:
+    print("The set DOES contain the number 50")
+else:
+    print("The set does not contain the number 50")
+
