@@ -11,9 +11,7 @@ x.append(4)
 print(x)
 
 # Using y, change x so that it is [1, 2, 3, 4, 8, 9, 10]
-x.insert(4, 8)
-x.insert(5, 9)
-x.insert(6, 10)
+x.extend(y)
 print(x)
 
 # Change x so that it is [1, 2, 3, 4, 9, 10]
@@ -32,6 +30,4 @@ print(list_length)
 z = []
 
 for i in x:
-    z.append(i*1000)
-
-print(z)
+  print(i*1000)
