@@ -20,6 +20,6 @@ print(x+z)
 
 # Write a print statement that combines x + y into the string value 57
 
-w = str(y)
+w = str(x)
 
-print(w)
+print(y)
