@@ -12,9 +12,9 @@ print(f1(4, 2))
 # Write a function f2 that takes any number of integer arguments and prints the
 # sum. Google for "python arbitrary arguments" and look for "*args"
 
-def f2(*argv):
+def f2(*args):
     sum = 0
-    for i in argv:
+    for i in args:
         sum += i
     return sum
     
@@ -34,17 +34,17 @@ print(f2(*a))    # Should print 22
 # it returns that value plus 1. If two arguments, it returns the sum of the
 # arguments. Google "python default arguments" for a hint.
 
-def f3(*argv):
-    if len(argv) == 0:
+def f3(*args):
+    if len(args) == 0:
         returned_num =0
         return returned_num
-    elif len(argv) == 1:
+    elif len(args) == 1:
         returned_num = 0
-        returned_num = argv[0] + 1
+        returned_num = args[0] + 1
         return returned_num
-    elif len(argv) == 2:
+    elif len(args) == 2:
         returned_num =0
-        returned_num = argv[0] + argv[1]
+        returned_num = args[0] + args[1]
         return returned_num
 
 
