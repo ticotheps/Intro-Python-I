@@ -2,7 +2,7 @@
 # constructor
 
 class LatLon:
-    def __init__(self, lat, lon):
+    def __init__(self, lat=0, lon=0):
         self.lat = lat
         self.lon = lon
         
@@ -10,25 +10,26 @@ class LatLon:
 # constructor. It should inherit from LatLon. Look up the `super` method.
 
 class Waypoint(LatLon):
-    def __init__(self, name, lat, lon):
+    def __init__(self, name, lat=0, lon=0):
         super().__init__(lat, lon)
         self.name = name
+        
     def __str__(self):
-        return (f"{self.name}, {self.lat}, {self.lon}")
+        # return "<Waypoint '{}' ({:f}, {})>".format(self.name, self.lat, self.lon)
+        return (f"<Waypoint '{self.name}' ({self.lat}, {self.lon})>")
 
 # Make a class Geocache that can be passed parameters `name`, `difficulty`,
 # `size`, `lat`, and `lon` to the constructor. What should it inherit from?
 
 class Geocache(Waypoint):
-    def __init__(self, name, difficulty, size, lat, lon):
-        super().__init__(self, lat, lon)
-        self.name = name
+    def __init__(self, name, difficulty, size, lat=0, lon=0):
+        super().__init__(name, lat, lon)
         self.difficulty = difficulty
         self.size = size
-    def new_property_test(self):
-        self.new = "EXISTS"
+        
     def __str__(self):
-        return (f"{self.name}, diff: {self.difficulty}, size: {self.size}, {self.lat}, {self.lon}")
+        # return "<Geocache '{}' {} {} ({:f}, {})>".format(self.name, self.difficulty, self.size, self.lat, self.lon)
+        return (f"<Geocache '{self.name}' {self.difficulty} {self.size} ({self.lat}, {self.lon})>")
 
 gc = Geocache("Geo test", 10, 3, 24, 26)
 
