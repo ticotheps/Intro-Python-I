@@ -38,7 +38,7 @@ elif l == 3:
     month = int(sys.argv[1])
     year = int(sys.argv[2])
 else: 
-    print("***Your terminal command must be in this format: python 14_cal.py [month] [year]***")
+    print("***Terminal command must be in this format: python 14_cal.py [int(month)] [int(year)]***")
     sys.exit(1)
     
 cal = calendar.TextCalendar()
