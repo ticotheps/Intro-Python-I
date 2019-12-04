@@ -23,35 +23,26 @@ import sys
 import calendar
 from datetime import datetime
 
-args = sys.argv
+l = len(sys.argv)
 
-print(args)
-
-
-
-# Collect the input
-
-# If there are no args:
-  # If the user doesn't specify any input, your program should
-  # print the calendar for the current month. The 'datetime'
-  # module may be helpful for this.
-# If there is 1 arg: 
-  # Do something
-
-month = datetime.today().month
-year = datetime.today().year
-
-if len(args) == 1:
-    pass
-if len(args) == 2:
-    month = int(args[1])
-elif len(args) == 3:
-    month = int(args[1])
-    year = int(args[2])
+if l == 1:
+    # User didn't specify any input
+    month = datetime.today().month
+    year = datetime.today().year
+elif l == 2:
+    # User didn't specify year
+    month = int(sys.argv[1])
+    year = datetime.now().year
+elif l == 3:
+    # User specified both month and year
+    month = int(sys.argv[1])
+    year = int(sys.argv[2])
 else: 
-    print("Error: Must be in format [month] [year]")
-    exit()
+    print("***Your terminal command must be in this format: python 14_cal.py [month] [year]***")
+    sys.exit(1)
+    
+cal = calendar.TextCalendar()
 
-calendar.TextCalendar().prmonth(year,month)
+cal.prmonth(year, month)
 
 
